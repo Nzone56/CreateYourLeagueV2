@@ -1,5 +1,12 @@
+import { AppContainer } from "./App.styled";
+import { LandingPage } from "./pages/LandingPage/LandingPage";
+
 function App() {
-  return <>Hola Mundo</>;
+  return (
+    <AppContainer>
+      <LandingPage />;
+    </AppContainer>
+  );
 }
 
 export default App;
