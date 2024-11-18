@@ -14,7 +14,7 @@ export const LeagueCard = ({
   league: LeaguePrev;
   onClick: () => void;
 }) => {
-  const { logo, name, color } = league;
+  const { logo, name, colors } = league;
 
   const logos: Record<string, string> = {
     PremierLeague,
@@ -26,7 +26,7 @@ export const LeagueCard = ({
   };
 
   return (
-    <StyledLeagueCard background={color} onClick={onClick}>
+    <StyledLeagueCard background={colors.primary} onClick={onClick}>
       <LogoCardImage src={logos[logo]} alt={`${name}-logo`} />
     </StyledLeagueCard>
   );

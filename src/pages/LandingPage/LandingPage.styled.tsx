@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 export const LandingPageContainer = styled(Box)({
-  backgroundColor: "#181a2f",
   width: "100vw",
   minHeight: "100vh",
   display: "flex",
@@ -52,5 +51,17 @@ export const StyledPreviewLeague = styled(Box)<{ background: string }>(
     padding: "1rem",
     width: "100%",
     height: "calc (100% - 2rem)",
+  })
+);
+
+export const SelectLeagueButton = styled(Button)<{ buttonColor: string }>(
+  ({ buttonColor }) => ({
+    borderColor: buttonColor,
+    color: buttonColor,
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    "&:hover": {
+      transform: "scale(1.05)",
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+    },
   })
 );

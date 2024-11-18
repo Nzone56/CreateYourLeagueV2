@@ -1,40 +1,63 @@
 import { LeaguePrev } from "../models/interfaces/interfaces";
-
 export const leagues: LeaguePrev[] = [
   {
     uid: "champions-league",
     logo: "UefaChampionsLeague",
     name: "UEFA Champions League",
-    color: "#0d3aff",
+    colors: {
+      primary: "#0d3aff",
+      secondary: "#1b1f7a",
+      tertiary: "#d1e4ff",
+    },
   },
   {
     uid: "premier-league",
     logo: "PremierLeague",
     name: "Premier League",
-    color: "#37003C",
+    colors: {
+      primary: "#37003C",
+      secondary: "#ff0058",
+      tertiary: "#d9c3ff",
+    },
   },
   {
     uid: "la-liga",
     logo: "LaLiga",
     name: "La Liga",
-    color: "#EF1C27",
+    colors: {
+      primary: "#EF1C27",
+      secondary: "#FFB81C",
+      tertiary: "#A8B400",
+    },
   },
   {
     uid: "serie-a",
     logo: "SerieA",
     name: "Serie A",
-    color: "#171d8d",
+    colors: {
+      primary: "#171d8d",
+      secondary: "#1fc0fc",
+      tertiary: "#f0f0f0",
+    },
   },
   {
     uid: "bundesliga",
     logo: "Bundesliga",
     name: "Bundesliga",
-    color: "#CC0000",
+    colors: {
+      primary: "#CC0000",
+      secondary: "#000000",
+      tertiary: "#FFFFFF",
+    },
   },
   {
     uid: "ligue-1",
     logo: "Ligue1",
     name: "Ligue 1",
-    color: "#262624",
+    colors: {
+      primary: "#262624",
+      secondary: "#FDEA1A",
+      tertiary: "#A5ACAF",
+    },
   },
 ];
