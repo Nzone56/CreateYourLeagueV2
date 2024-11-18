@@ -16,7 +16,6 @@ export const PreviewSelectedLeague = ({
     navigate("/league");
   };
 
-  console.log(selectedLeague.uid);
   return (
     <StyledPreviewLeague
       background={selectedLeague.colors.primary ?? "#181a2f"}
@@ -29,7 +28,7 @@ export const PreviewSelectedLeague = ({
         variant="outlined"
         size="large"
         onClick={handleSelectLeague}
-        buttonColor={selectedLeague.colors.tertiary}
+        buttoncolor={selectedLeague.colors.tertiary}
         endIcon={<FontAwesomeIcon icon={faAngleRight} />}
       >
         Choose

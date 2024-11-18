@@ -1,12 +1,16 @@
-import { useState } from "react";
 import { leagues } from "../../data/leagues";
 import { LandingPageContent } from "./LandingPage.styled";
 import { LeagueCard } from "./LeagueCard";
 import { Box } from "@mui/material";
 import { PreviewSelectedLeague } from "./PreviewSelectedLeague";
+import { setSelectedLeague } from "../../reducers/league.actions";
+import { useSelector } from "react-redux";
+import { selectLeague } from "../../reducers/League.selector";
 
 export const LandingContent = () => {
-  const [selectedCard, setSelectedCard] = useState<string>("");
+  const selectedLeague = useSelector(selectLeague);
+
+  console.log(selectedLeague);
 
   return (
     <LandingPageContent>
@@ -15,16 +19,12 @@ export const LandingContent = () => {
           <LeagueCard
             key={league.uid}
             league={league}
-            onClick={() => setSelectedCard(league.uid)}
+            onClick={() => setSelectedLeague(league)}
           />
         ))}
       </Box>
-      {selectedCard ? (
-        <PreviewSelectedLeague
-          selectedLeague={
-            leagues.find((league) => league.uid === selectedCard)!
-          }
-        />
+      {selectedLeague ? (
+        <PreviewSelectedLeague selectedLeague={selectedLeague} />
       ) : null}
     </LandingPageContent>
   );

@@ -54,10 +54,10 @@ export const StyledPreviewLeague = styled(Box)<{ background: string }>(
   })
 );
 
-export const SelectLeagueButton = styled(Button)<{ buttonColor: string }>(
-  ({ buttonColor }) => ({
-    borderColor: buttonColor,
-    color: buttonColor,
+export const SelectLeagueButton = styled(Button)<{ buttoncolor: string }>(
+  ({ buttoncolor }) => ({
+    borderColor: buttoncolor,
+    color: buttoncolor,
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     "&:hover": {
       transform: "scale(1.05)",

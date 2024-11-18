@@ -1,0 +1,27 @@
+import { createReducer } from "@reduxjs/toolkit";
+import { LeaguePrev } from "../models/interfaces/interfaces";
+import { setSelectedLeague } from "./league.actions";
+
+interface LeagueReducer {
+  selectedLeague: LeaguePrev | null;
+}
+
+const initialState: LeagueReducer = {
+  selectedLeague: {
+    uid: "",
+    logo: "",
+    name: "",
+    colors: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+    },
+  },
+};
+
+export const leagueReducer = createReducer(initialState, (builder) => {
+  builder.addCase(setSelectedLeague, (state, action) => ({
+    ...state,
+    selectedLeague: action.payload,
+  }));
+});
