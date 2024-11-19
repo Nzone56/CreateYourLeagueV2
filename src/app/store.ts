@@ -1,5 +1,5 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
-import { leagueReducer } from "../reducers/League.reducer";
+import { leagueReducer } from "../reducers/league.reducer";
 
 export const store = configureStore({
   reducer: {

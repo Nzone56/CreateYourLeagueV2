@@ -4,14 +4,19 @@ import { LeagueCard } from "./LeagueCard";
 import { Box } from "@mui/material";
 import { PreviewSelectedLeague } from "./PreviewSelectedLeague";
 import { setSelectedLeague } from "../../reducers/league.actions";
-import { useSelector } from "react-redux";
-import { selectLeague } from "../../reducers/League.selector";
+import { useDispatch, useSelector } from "react-redux";
+import { selectLeague } from "../../reducers/league.selector";
+import { LeaguePrev } from "../../models/interfaces/interfaces";
 
 export const LandingContent = () => {
+  const dispatch = useDispatch();
   const selectedLeague = useSelector(selectLeague);
 
-  console.log(selectedLeague);
-
+  const handleSelectLeague = (league: LeaguePrev) => {
+    if (league.uid !== selectedLeague?.uid) {
+      dispatch(setSelectedLeague(league));
+    }
+  };
   return (
     <LandingPageContent>
       <Box sx={{ margin: "1rem 0" }}>
@@ -19,7 +24,7 @@ export const LandingContent = () => {
           <LeagueCard
             key={league.uid}
             league={league}
-            onClick={() => setSelectedLeague(league)}
+            onClick={() => handleSelectLeague(league)}
           />
         ))}
       </Box>
