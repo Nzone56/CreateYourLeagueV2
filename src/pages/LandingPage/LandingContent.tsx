@@ -17,6 +17,7 @@ export const LandingContent = () => {
       dispatch(setSelectedLeague(league));
     }
   };
+
   return (
     <LandingPageContent>
       <Box sx={{ margin: "1rem 0" }}>

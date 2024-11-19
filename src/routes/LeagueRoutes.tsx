@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LandingPage } from "../pages/LandingPage/LandingPage";
-import { LeaguePage } from "../pages/LeaguePage/LeaguePage";
+import { LandingPage } from "../pages/LandingPage";
+import { LeaguePage } from "../pages/LeaguePage";
 import { ErrorPage } from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter(
