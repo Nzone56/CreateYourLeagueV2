@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import { PreviewSelectedLeague } from "./PreviewSelectedLeague";
 import { useDispatch, useSelector } from "react-redux";
 import { selectLeague } from "../../store/league/league.selector";
-import { LeaguePrev } from "../../models/interfaces/interfaces";
+import type { LeaguePrev } from "../../models/interfaces/interfaces";
 import { setSelectedLeague } from "../../store/league/league.actions";
 
 export const LandingContent = () => {

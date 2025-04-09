@@ -1,4 +1,4 @@
-import { LeaguePrev } from "../models/interfaces/interfaces";
+import type { LeaguePrev } from "../models/interfaces/interfaces";
 export const leagues: LeaguePrev[] = [
   {
     uid: "champions-league",
