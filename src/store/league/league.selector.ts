@@ -1,3 +1,3 @@
-import { RootState } from "../../app/store";
+import { RootState } from "../store";
 
-export const selectLeague = (state: RootState) => state.league.selectedLeague;
+export const getSelectedLeague = (state: RootState) => state.league.selectedLeague;

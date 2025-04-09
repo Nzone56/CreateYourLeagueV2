@@ -3,14 +3,14 @@ import { LandingPageContent } from "./LandingPage.styled";
 import { LeagueCard } from "./LeagueCard";
 import { Box } from "@mui/material";
 import { PreviewSelectedLeague } from "./PreviewSelectedLeague";
-import { useDispatch, useSelector } from "react-redux";
-import { selectLeague } from "../../store/league/league.selector";
-import type { LeaguePrev } from "../../models/interfaces/interfaces";
+import { getSelectedLeague } from "../../store/league/league.selector";
+import type { LeaguePrev } from "../../models/League/ILeague";
 import { setSelectedLeague } from "../../store/league/league.actions";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 
 export const LandingContent = () => {
-  const dispatch = useDispatch();
-  const selectedLeague = useSelector(selectLeague);
+  const dispatch = useAppDispatch();
+  const selectedLeague = useAppSelector(getSelectedLeague);
 
   const handleSelectLeague = (league: LeaguePrev) => {
     if (league.uid !== selectedLeague?.uid) {
@@ -25,7 +25,7 @@ export const LandingContent = () => {
           <LeagueCard key={league.uid} league={league} onClick={() => handleSelectLeague(league)} />
         ))}
       </Box>
-      {selectedLeague ? <PreviewSelectedLeague selectedLeague={selectedLeague} /> : null}
+      <PreviewSelectedLeague />
     </LandingPageContent>
   );
 };

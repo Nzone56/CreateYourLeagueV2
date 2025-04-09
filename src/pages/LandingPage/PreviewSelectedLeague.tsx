@@ -1,22 +1,23 @@
-import { Typography } from "@mui/material";
-import type { LeaguePrev } from "../../models/interfaces/interfaces";
-import { SelectLeagueButton, StyledPreviewLeague } from "./LandingPage.styled";
+import { PreviewTitle, SelectLeagueButton, StyledPreviewLeague } from "./LandingPage.styled";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { getSelectedLeague } from "../../store/league/league.selector";
+import { useAppSelector } from "../../store/store";
 
-export const PreviewSelectedLeague = ({ selectedLeague }: { selectedLeague: LeaguePrev }) => {
+export const PreviewSelectedLeague = () => {
   const navigate = useNavigate();
 
+  const selectedLeague = useAppSelector(getSelectedLeague);
   const handleSelectLeague = () => {
     navigate("/league");
   };
 
   return (
     <StyledPreviewLeague background={selectedLeague.colors.primary ?? "#181a2f"}>
-      <Typography sx={{ fontSize: "h3.fontSize", textAlign: "center" }}>{selectedLeague.name}</Typography>
+      <PreviewTitle variant="h3">{selectedLeague.name}</PreviewTitle>
       <SelectLeagueButton
-        disabled={selectedLeague.uid !== "premier-league"}
+        disabled={selectedLeague.uid !== "premier"}
         variant="outlined"
         size="large"
         onClick={handleSelectLeague}

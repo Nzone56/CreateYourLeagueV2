@@ -4,3 +4,22 @@
   border: 0;
   padding: 0;
 }
+
+html {
+  font-size: 62.5%;
+  color-scheme: light dark;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

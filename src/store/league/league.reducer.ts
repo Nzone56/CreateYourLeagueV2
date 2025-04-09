@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import type { LeaguePrev } from "../../models/interfaces/interfaces";
+import type { LeaguePrev } from "../../models/League/ILeague";
 import { setSelectedLeague } from "./league.actions";
 
 interface LeagueReducer {
@@ -8,7 +8,7 @@ interface LeagueReducer {
 
 const initialState: LeagueReducer = {
   selectedLeague: {
-    uid: "",
+    uid: "champions",
     logo: "",
     name: "",
     colors: {

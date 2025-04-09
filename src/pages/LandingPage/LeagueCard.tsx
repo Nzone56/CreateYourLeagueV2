@@ -1,4 +1,4 @@
-import type { LeaguePrev } from "../../models/interfaces/interfaces";
+import type { LeaguePrev } from "../../models/League/ILeague";
 import { LogoCardImage, StyledLeagueCard } from "./LandingPage.styled";
 import SerieA from "../../assets/SerieA-small.png";
 import LaLiga from "../../assets/LaLiga-small.png";

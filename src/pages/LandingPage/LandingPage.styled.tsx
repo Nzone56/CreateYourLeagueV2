@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export const LandingPageContainer = styled(Box)({
   width: "100vw",
@@ -44,24 +44,24 @@ export const LogoCardImage = styled.img(() => ({
   height: "auto",
 }));
 
-export const StyledPreviewLeague = styled(Box)<{ background: string }>(
-  ({ background }) => ({
-    backgroundColor: background,
-    margin: "2rem 0",
-    padding: "1rem",
-    width: "100%",
-    height: "calc (100% - 2rem)",
-  })
-);
+export const StyledPreviewLeague = styled(Box)<{ background: string }>(({ background }) => ({
+  backgroundColor: background,
+  margin: "2rem 0",
+  padding: "1rem",
+  width: "100%",
+  height: "calc (100% - 2rem)",
+}));
 
-export const SelectLeagueButton = styled(Button)<{ buttoncolor: string }>(
-  ({ buttoncolor }) => ({
-    borderColor: buttoncolor,
-    color: buttoncolor,
-    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-    "&:hover": {
-      transform: "scale(1.05)",
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-    },
-  })
-);
+export const SelectLeagueButton = styled(Button)<{ buttoncolor: string }>(({ buttoncolor }) => ({
+  borderColor: buttoncolor,
+  color: buttoncolor,
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.05)",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+  },
+}));
+
+export const PreviewTitle = styled(Typography)({
+  textAlign: "center",
+});
