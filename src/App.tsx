@@ -1,8 +1,8 @@
 import { RouterProvider } from "react-router-dom";
 import { AppContainer } from "./App.styled.tsx";
 import { router } from "./routes/LeagueRoutes.tsx";
-import { store } from "./app/store.ts";
 import { Provider } from "react-redux";
+import { store } from "./store/store.ts";
 
 export const App = () => {
   return (

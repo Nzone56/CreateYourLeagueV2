@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { useSelector } from "react-redux";
-import { selectLeague } from "../../reducers/league.selector";
+import { selectLeague } from "../../store/league/league.selector";
 import { TabsMenu } from "../../components/TabsMenu";
 
 export const LeaguePage = () => {

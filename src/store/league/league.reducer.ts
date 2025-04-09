@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { LeaguePrev } from "../models/interfaces/interfaces";
+import { LeaguePrev } from "../../models/interfaces/interfaces";
 import { setSelectedLeague } from "./league.actions";
 
 interface LeagueReducer {
