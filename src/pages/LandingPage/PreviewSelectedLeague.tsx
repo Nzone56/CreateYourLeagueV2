@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { getSelectedLeague } from "../../store/league/league.selector";
 import { useAppSelector } from "../../store/store";
+import { useTranslation } from "react-i18next";
 
 export const PreviewSelectedLeague = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ export const PreviewSelectedLeague = () => {
     navigate("/league");
   };
 
+  const { t } = useTranslation();
   return (
     <StyledPreviewLeague background={selectedLeague?.colors.primary ?? "#181a2f"}>
       <PreviewTitle variant="h3">{selectedLeague?.name.toLocaleUpperCase()}</PreviewTitle>
@@ -24,7 +26,7 @@ export const PreviewSelectedLeague = () => {
         buttoncolor={selectedLeague?.colors.tertiary || "#fff"}
         endIcon={<FontAwesomeIcon icon={faAngleRight} />}
       >
-        Choose
+        {t("button", "choose")}
       </SelectLeagueButton>
     </StyledPreviewLeague>
   );

@@ -1,9 +1,10 @@
+import { Typography } from "@mui/material";
 import { LandingPageHeader } from "./LandingPage.styled";
 
 export const LandingHeader = () => {
   return (
     <LandingPageHeader>
-      <div>Este es el header</div>
+      <Typography textAlign={"center"}>CREATE YOUR LEAGUE</Typography>
     </LandingPageHeader>
   );
 };

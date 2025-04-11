@@ -1,0 +1,8 @@
+{
+  "greeting": "Hola, {{name}}!",
+  "button": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "choose": "Elegir"
+  }
+}

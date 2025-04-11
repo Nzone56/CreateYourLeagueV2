@@ -17,6 +17,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "Champions",
     },
   }),
@@ -34,6 +35,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "PremierLeague",
     },
   }),
@@ -52,6 +54,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "LaLiga",
     },
   }),
@@ -70,6 +73,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "SerieA",
     },
   }),
@@ -88,6 +92,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "Bundesliga",
     },
   }),
@@ -106,6 +111,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
+      fontFamily: "FontDefault",
       // fontFamily: "Ligue1",
     },
   }),
@@ -124,7 +130,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Default",
+      fontFamily: "FontDefault",
     },
   }),
 };

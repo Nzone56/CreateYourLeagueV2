@@ -25,10 +25,10 @@ body {
 }
 
 @font-face {
-  font-family: "Default";
+  font-family: "FontDefault";
   font-style: normal;
   font-weight: normal;
-  src: local("Default"), url("./assets/fonts/Default.woff") format("woff");
+  src: local("FontDefault"), url("./assets/fonts/Default.woff") format("woff");
 }
 
 @font-face {
