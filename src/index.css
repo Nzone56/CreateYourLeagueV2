@@ -23,3 +23,45 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+  font-family: "Default";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Default"), url("./assets/fonts/Default.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Champions";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Champions"), url("./assets/fonts/Champions.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "PremierLeague";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PremierLeague"), url("./assets/fonts/PremierLeague.woff") format("woff");
+}
+
+@font-face {
+  font-family: "LaLiga";
+  font-style: normal;
+  font-weight: normal;
+  src: local("LaLiga"), url("./assets/fonts/LaLiga.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SerieA";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SerieA"), url("./assets/fonts/SerieA.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Ligue1";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Ligue1"), url("./assets/fonts/Default.woff") format("woff");
+}

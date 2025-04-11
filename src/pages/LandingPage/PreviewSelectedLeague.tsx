@@ -14,14 +14,14 @@ export const PreviewSelectedLeague = () => {
   };
 
   return (
-    <StyledPreviewLeague background={selectedLeague.colors.primary ?? "#181a2f"}>
-      <PreviewTitle variant="h3">{selectedLeague.name}</PreviewTitle>
+    <StyledPreviewLeague background={selectedLeague?.colors.primary ?? "#181a2f"}>
+      <PreviewTitle variant="h3">{selectedLeague?.name.toLocaleUpperCase()}</PreviewTitle>
       <SelectLeagueButton
-        disabled={selectedLeague.uid !== "premier"}
+        disabled={selectedLeague?.uid !== "premier"}
         variant="outlined"
         size="large"
         onClick={handleSelectLeague}
-        buttoncolor={selectedLeague.colors.tertiary}
+        buttoncolor={selectedLeague?.colors.tertiary || "#fff"}
         endIcon={<FontAwesomeIcon icon={faAngleRight} />}
       >
         Choose

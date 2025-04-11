@@ -1,15 +1,17 @@
 import type { LeaguePrev } from "../../models/League/ILeague";
-import { LogoCardImage, StyledLeagueCard } from "./LandingPage.styled";
+import { LogoCardImage, LogoCardTitle, StyledLeagueCard } from "./LandingPage.styled";
 import SerieA from "../../assets/SerieA-small.png";
 import LaLiga from "../../assets/LaLiga-small.png";
 import Ligue1 from "../../assets/Ligue1-small.png";
 import Bundesliga from "../../assets/Bundesliga-small.png";
 import PremierLeague from "../../assets/PremierLeague-small.png";
 import UefaChampionsLeague from "../../assets/UefaChampionsLeague-small.png";
+import { useState } from "react";
 
 export const LeagueCard = ({ league, onClick }: { league: LeaguePrev; onClick: () => void }) => {
-  const { logo, name, colors } = league;
+  const { shortName, name, colors, images /*fontFamily*/ } = league;
 
+  const [hoveredCard, setHoveredCard] = useState<boolean>(false);
   const logos: Record<string, string> = {
     PremierLeague,
     SerieA,
@@ -20,8 +22,19 @@ export const LeagueCard = ({ league, onClick }: { league: LeaguePrev; onClick: (
   };
 
   return (
-    <StyledLeagueCard background={colors.primary} onClick={onClick}>
-      <LogoCardImage src={logos[logo]} alt={`${name}-logo`} />
+    <StyledLeagueCard
+      background={colors.primary}
+      hoverBackground={colors.secondary}
+      onClick={onClick}
+      onMouseEnter={() => setHoveredCard(true)}
+      onMouseLeave={() => setHoveredCard(false)}
+    >
+      <LogoCardImage src={logos[images]} alt={`${name}-logo`} />
+      {hoveredCard && (
+        <LogoCardTitle /* font={fontFamily} */ font={"Default"} color={colors.primary}>
+          {shortName.toLocaleUpperCase()}
+        </LogoCardTitle>
+      )}
     </StyledLeagueCard>
   );
 };

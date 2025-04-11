@@ -1,7 +1,6 @@
 import { leagues } from "../../data/leagues";
-import { LandingPageContent } from "./LandingPage.styled";
+import { LandingPageContent, LeagueCardsContainer } from "./LandingPage.styled";
 import { LeagueCard } from "./LeagueCard";
-import { Box } from "@mui/material";
 import { PreviewSelectedLeague } from "./PreviewSelectedLeague";
 import { getSelectedLeague } from "../../store/league/league.selector";
 import type { LeaguePrev } from "../../models/League/ILeague";
@@ -20,11 +19,11 @@ export const LandingContent = () => {
 
   return (
     <LandingPageContent>
-      <Box sx={{ margin: "1rem 0" }}>
+      <LeagueCardsContainer>
         {leagues.map((league) => (
           <LeagueCard key={league.uid} league={league} onClick={() => handleSelectLeague(league)} />
         ))}
-      </Box>
+      </LeagueCardsContainer>
       <PreviewSelectedLeague />
     </LandingPageContent>
   );

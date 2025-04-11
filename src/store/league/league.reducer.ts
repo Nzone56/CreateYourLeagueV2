@@ -8,14 +8,16 @@ interface LeagueReducer {
 
 const initialState: LeagueReducer = {
   selectedLeague: {
-    uid: "champions",
-    logo: "",
+    uid: "default",
+    shortName: "",
+    images: "",
     name: "",
     colors: {
       primary: "",
       secondary: "",
       tertiary: "",
     },
+    fontFamily: "",
   },
 };
 

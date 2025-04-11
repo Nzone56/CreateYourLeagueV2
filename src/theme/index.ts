@@ -17,7 +17,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "'Open Sans', sans-serif",
+      // fontFamily: "Champions",
     },
   }),
   premier: createTheme({
@@ -34,7 +34,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Poppins, sans-serif",
+      // fontFamily: "PremierLeague",
     },
   }),
 
@@ -52,7 +52,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Montserrat, sans-serif",
+      // fontFamily: "LaLiga",
     },
   }),
 
@@ -70,7 +70,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Roboto Condensed, sans-serif",
+      // fontFamily: "SerieA",
     },
   }),
 
@@ -88,7 +88,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Titillium Web, sans-serif",
+      // fontFamily: "Bundesliga",
     },
   }),
 
@@ -106,7 +106,25 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "Open Sans, sans-serif",
+      // fontFamily: "Ligue1",
+    },
+  }),
+
+  default: createTheme({
+    ...baseOptions,
+    palette: {
+      primary: { main: "#00285e" },
+      secondary: { main: "#dcd427" },
+      info: { main: "#00b8f4" },
+      background: { default: "#f0f0f0" },
+      text: {
+        primary: "#1a1a1a",
+        secondary: "#eeeeee",
+      },
+    },
+    typography: {
+      ...baseOptions.typography,
+      fontFamily: "Default",
     },
   }),
 };
