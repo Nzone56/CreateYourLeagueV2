@@ -25,16 +25,22 @@ export const LandingPageHeader = styled(Box)({
 
 export const LandingPageContent = styled(Box)({
   backgroundColor: "#181a2f",
+  width: "100%",
   padding: "1rem",
   display: "flex",
+  justifyContent: "center",
   flexGrow: 1,
   flexBasis: 0,
 });
 
+export const LeagueCardsContainer = styled(Box)({
+  margin: "1rem 0",
+});
+
 export const StyledLeagueCard = styled(Box)<{
   background: string;
-  hoverBackground: string;
-}>(({ background, hoverBackground }) => ({
+  hoverbackground: string;
+}>(({ background, hoverbackground }) => ({
   backgroundColor: background,
   color: background,
   padding: "0.5rem",
@@ -50,7 +56,7 @@ export const StyledLeagueCard = styled(Box)<{
   "&:hover": {
     transform: "scale(1.15)",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-    animation: `${fadeOutBg(hoverBackground)} 0.3s ease-in forwards`,
+    animation: `${fadeOutBg(hoverbackground)} 0.3s ease-in forwards`,
   },
 }));
 
@@ -84,25 +90,68 @@ export const LogoCardTitle = styled(Typography)<{ font: string; color: string }>
 export const StyledPreviewLeague = styled(Box)<{ background: string }>(({ background }) => ({
   backgroundColor: background,
   margin: "2rem 0",
-  padding: "1rem",
   width: "100%",
-  height: "calc (100% - 2rem)",
+  borderRadius: "15px",
+  position: "relative",
+  overflow: "hidden",
+  maxWidth: "1150px",
+  flexGrow: 1,
+  flexBasis: 0,
 }));
 
-export const SelectLeagueButton = styled(Button)<{ buttoncolor: string }>(({ buttoncolor }) => ({
-  borderColor: buttoncolor,
-  color: buttoncolor,
-  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-  "&:hover": {
-    transform: "scale(1.05)",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-  },
+export const PreviewImageWrapper = styled(Box)({
+  position: "relative",
+  width: "100%",
+  height: "60%",
+  maxHeight: "calc((100vh - 126px) *0.6)",
+  overflow: "hidden",
+  borderTopLeftRadius: "15px",
+  borderTopRightRadius: "15px",
+});
+
+export const PreviewImage = styled("img")({
+  width: "100%",
+  height: "auto",
+  objectFit: "fill",
+});
+
+export const PreviewGradientOverlay = styled(Box)<{ background: string }>(({ background }) => ({
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  background: `linear-gradient(to top, ${background} 0%, rgba(0,0,0,0) 70%)`,
+}));
+
+export const PreviewContent = styled(Box)<{ background: string }>(({ background }) => ({
+  backgroundColor: background,
+  width: "100%",
+  height: "40%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  padding: "1rem",
+  gap: "1rem",
 }));
 
 export const PreviewTitle = styled(Typography)({
-  textAlign: "center",
+  margin: "2rem",
 });
 
-export const LeagueCardsContainer = styled(Box)({
-  margin: "1rem 0",
-});
+export const SelectLeagueButton = styled(Button)<{ buttoncolor: string }>(({ buttoncolor }) => ({
+  borderColor: "white",
+  color: "white",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  fontSize: "1.6rem",
+  "&:hover": {
+    transform: "scale(1.05)",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+    color: buttoncolor,
+    borderColor: buttoncolor,
+  },
+  "&:disabled": {
+    color: "rgba(255,255,255,0.5)",
+    borderColor: "rgba(255,255,255,0.5)",
+  },
+}));

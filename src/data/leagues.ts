@@ -66,9 +66,9 @@ export const leagues: LeaguePrev[] = [
     name: "Ligue 1",
     shortName: "Ligue 1",
     colors: {
-      primary: "#FDEA1A",
       secondary: "#085FFF",
-      tertiary: "#262624",
+      primary: "#262624",
+      tertiary: "#FDEA1A",
     },
     fontFamily: "Ligue1",
   },

@@ -3,6 +3,7 @@
   "button": {
     "save": "Guardar",
     "cancel": "Cancelar",
-    "choose": "Elegir"
+    "choose": "Elegir",
+    "comingsoon": "Proximamente"
   }
 }

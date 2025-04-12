@@ -24,7 +24,7 @@ export const LeagueCard = ({ league, onClick }: { league: LeaguePrev; onClick: (
   return (
     <StyledLeagueCard
       background={colors.primary}
-      hoverBackground={colors.secondary}
+      hoverbackground={colors.secondary}
       onClick={onClick}
       onMouseEnter={() => setHoveredCard(true)}
       onMouseLeave={() => setHoveredCard(false)}
