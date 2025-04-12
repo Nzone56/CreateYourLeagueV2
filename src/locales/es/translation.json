@@ -6,5 +6,12 @@
     "cancel": "Cancelar",
     "choose": "Elegir",
     "comingsoon": "Proximamente"
+  },
+  "tab": {
+    "home": "Inicio",
+    "schedule": "Calendario",
+    "standings": "Posiciones",
+    "teams": "Equipos",
+    "league": "Liga"
   }
 }

@@ -6,5 +6,12 @@
     "cancel": "Cancel",
     "choose": "Choose",
     "comingsoon": "Coming Soon"
+  },
+  "tab": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "standings": "Standings",
+    "teams": "Teams",
+    "league": "League"
   }
 }

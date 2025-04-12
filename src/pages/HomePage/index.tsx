@@ -1,6 +1,6 @@
 import { TabsLayout } from "../../layouts/TabsLayout";
 
-export const LeaguePage = () => {
+export const HomePage = () => {
   return (
     <div>
       <TabsLayout />

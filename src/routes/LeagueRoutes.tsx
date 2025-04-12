@@ -1,7 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import { LandingPage } from "../pages/LandingPage";
-import { LeaguePage } from "../pages/LeaguePage";
+import { HomePage } from "../pages/HomePage";
 import { ErrorPage } from "../pages/ErrorPage/ErrorPage";
+import { LeaguePage } from "../pages/LeaguePage";
+import { SchedulePage } from "../pages/SchedulePage";
+import { StandingsPage } from "../pages/StandingsPage";
+import { TeamsPage } from "../pages/TeamsPage";
 
 export const router = createBrowserRouter(
   [
@@ -9,6 +13,22 @@ export const router = createBrowserRouter(
       path: "/",
       element: <LandingPage />,
       errorElement: <ErrorPage />,
+    },
+    {
+      path: "/home",
+      element: <HomePage />,
+    },
+    {
+      path: "/schedule",
+      element: <SchedulePage />,
+    },
+    {
+      path: "/standings",
+      element: <StandingsPage />,
+    },
+    {
+      path: "/teams",
+      element: <TeamsPage />,
     },
     {
       path: "/league",

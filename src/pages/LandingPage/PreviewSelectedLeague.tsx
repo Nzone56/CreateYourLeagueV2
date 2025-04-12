@@ -19,7 +19,7 @@ export const PreviewSelectedLeague = () => {
 
   const selectedLeague = useAppSelector(getSelectedLeague);
   const handleSelectLeague = () => {
-    navigate("/league");
+    navigate("/home");
   };
 
   const { t } = useTranslation();
