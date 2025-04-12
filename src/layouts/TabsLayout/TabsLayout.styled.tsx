@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import { Box, Tab } from "@mui/material";
+import { Box, Tab, styled } from "@mui/material";
 
 export const NavMenuContainer = styled(Box)({
+  height: "70px",
   padding: "1rem 2rem",
 });
 export const StyledTab = styled(Tab)({

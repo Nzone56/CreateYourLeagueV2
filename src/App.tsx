@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import { AppContainer } from "./App.styled.tsx";
-import { router } from "./routes/LeagueRoutes.tsx";
+import { router } from "./routes/index.tsx";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { getSelectedLeague } from "./store/league/league.selector.ts";
 import { useAppSelector } from "./store/store.ts";

@@ -1,9 +1,9 @@
-import { TabsLayout } from "../../layouts/TabsLayout";
+import { MainLayout } from "../../layouts/MainLayout";
 
 export const StandingsPage = () => {
   return (
-    <div>
-      <TabsLayout />
-    </div>
+    <MainLayout>
+      <div> ESTA ES LA STANDINGS PAGEEEEE</div>
+    </MainLayout>
   );
 };

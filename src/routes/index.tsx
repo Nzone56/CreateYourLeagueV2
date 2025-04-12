@@ -6,6 +6,7 @@ import { LeaguePage } from "../pages/LeaguePage";
 import { SchedulePage } from "../pages/SchedulePage";
 import { StandingsPage } from "../pages/StandingsPage";
 import { TeamsPage } from "../pages/TeamsPage";
+import { TabsLayout } from "../layouts/TabsLayout";
 
 export const router = createBrowserRouter(
   [
@@ -15,24 +16,29 @@ export const router = createBrowserRouter(
       errorElement: <ErrorPage />,
     },
     {
-      path: "/home",
-      element: <HomePage />,
-    },
-    {
-      path: "/schedule",
-      element: <SchedulePage />,
-    },
-    {
-      path: "/standings",
-      element: <StandingsPage />,
-    },
-    {
-      path: "/teams",
-      element: <TeamsPage />,
-    },
-    {
-      path: "/league",
-      element: <LeaguePage />,
+      element: <TabsLayout />, // Layout que incluye TabsMenu
+      children: [
+        {
+          path: "/home",
+          element: <HomePage />,
+        },
+        {
+          path: "/schedule",
+          element: <SchedulePage />,
+        },
+        {
+          path: "/standings",
+          element: <StandingsPage />,
+        },
+        {
+          path: "/teams",
+          element: <TeamsPage />,
+        },
+        {
+          path: "/league",
+          element: <LeaguePage />,
+        },
+      ],
     },
   ],
   {

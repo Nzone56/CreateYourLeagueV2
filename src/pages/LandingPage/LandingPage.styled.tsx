@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { Box, Button, keyframes, Typography } from "@mui/material";
+import { Box, Button, keyframes, Typography, styled } from "@mui/material";
 
 const fadeInBg = (color: string) => keyframes`
   0% { background-color: ${color}; }
@@ -62,11 +61,11 @@ export const StyledLeagueCard = styled(Box)<{
   },
 }));
 
-export const LogoCardImage = styled.img(() => ({
+export const LogoCardImage = styled("img")({
   width: "50px",
   height: "auto",
   margin: "0 auto",
-}));
+});
 
 export const LogoCardTitle = styled(Typography)<{ font: string; color: string }>(({ font, color }) => ({
   textAlign: "center",

@@ -1,9 +1,9 @@
-import { TabsLayout } from "../../layouts/TabsLayout";
+import { MainLayout } from "../../layouts/MainLayout";
 
 export const SchedulePage = () => {
   return (
-    <div>
-      <TabsLayout />
-    </div>
+    <MainLayout>
+      <div> ESTA ES LA SCHEDULE PAGEEEEE</div>
+    </MainLayout>
   );
 };
