@@ -4,7 +4,7 @@ import { LandingPageHeader } from "./LandingPage.styled";
 export const LandingHeader = () => {
   return (
     <LandingPageHeader>
-      <Typography textAlign={"center"}>CREATE YOUR LEAGUE</Typography>
+      <Typography textAlign={"center"}>CreateYourLeague</Typography>
     </LandingPageHeader>
   );
 };

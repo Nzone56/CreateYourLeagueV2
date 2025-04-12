@@ -35,6 +35,8 @@ export const LandingPageContent = styled(Box)({
 
 export const LeagueCardsContainer = styled(Box)({
   margin: "1rem 0",
+  position: "relative",
+  zIndex: "1000",
 });
 
 export const StyledLeagueCard = styled(Box)<{
@@ -92,7 +94,6 @@ export const StyledPreviewLeague = styled(Box)<{ background: string }>(({ backgr
   margin: "2rem 0",
   width: "100%",
   borderRadius: "15px",
-  position: "relative",
   overflow: "hidden",
   maxWidth: "1150px",
   flexGrow: 1,

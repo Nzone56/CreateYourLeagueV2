@@ -1,5 +1,6 @@
 {
   "greeting": "Hola, {{name}}!",
+  "selectALeague": "Selecciona una liga",
   "button": {
     "save": "Guardar",
     "cancel": "Cancelar",

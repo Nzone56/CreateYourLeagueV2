@@ -31,10 +31,9 @@ export const PreviewSelectedLeague = () => {
           <PreviewGradientOverlay background={selectedLeague?.colors.primary ?? "#181a2f"} />
         </PreviewImageWrapper>
       )}
-
       <PreviewContent background={selectedLeague?.colors.primary ?? "#181a2f"}>
         {selectedLeague?.uid === "default" ? (
-          <PreviewTitle variant="h1">SELECCIONA UNA LIGA</PreviewTitle>
+          <PreviewTitle variant="h1">{t("selectALeague").toLocaleUpperCase()}</PreviewTitle>
         ) : (
           <>
             <PreviewTitle variant="h1">{selectedLeague?.name.toLocaleUpperCase()}</PreviewTitle>

@@ -17,7 +17,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "Champions",
     },
   }),
@@ -35,7 +35,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "PremierLeague",
     },
   }),
@@ -54,7 +54,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "LaLiga",
     },
   }),
@@ -73,7 +73,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "SerieA",
     },
   }),
@@ -92,7 +92,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "Bundesliga",
     },
   }),
@@ -111,7 +111,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
       // fontFamily: "Ligue1",
     },
   }),
@@ -130,7 +130,7 @@ export const leagueThemes: Record<LeagueName, Theme> = {
     },
     typography: {
       ...baseOptions.typography,
-      fontFamily: "FontDefault",
+      fontFamily: "Markazi",
     },
   }),
 };

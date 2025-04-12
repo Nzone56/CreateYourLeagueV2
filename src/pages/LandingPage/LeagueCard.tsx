@@ -31,7 +31,7 @@ export const LeagueCard = ({ league, onClick }: { league: LeaguePrev; onClick: (
     >
       <LogoCardImage src={logos[images]} alt={`${name}-logo`} />
       {hoveredCard && (
-        <LogoCardTitle /* font={fontFamily} */ font={"Default"} color={colors.primary}>
+        <LogoCardTitle /* font={fontFamily} */ font={"Default"} color={colors.primary} variant="h5">
           {shortName.toLocaleUpperCase()}
         </LogoCardTitle>
       )}
